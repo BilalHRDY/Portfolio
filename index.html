@@ -4,25 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
 
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../par/parallax.js-1.5.0/parallax.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bc7ad650e9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="parallax.js-1.5.0/parallax.min.js"></script>
     <title>Bilal HARDY</title>
   </head>
   <body>
-    <header>
-      <nav class="d-flex justify-content-center py-4">
-        <ul class="container d-flex justify-content-around my-0">
-          <li><a href="#firstName">Accueil</a></li>
-          <li><a href="#bio">Bilal</a></li>
-          <li><a href="#">Eco-système</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+    <header id="head">
+      <nav
+        class="navbar navbar-expand-md navbar-expand-lg fixed-top"
+        id="navbarFull"
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#head"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#bio">Bilal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tech">Eco-système</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio2">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#exposure2">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+
       <div
         class="parallax-header"
         data-parallax="scroll"
@@ -44,6 +85,7 @@
 
         <article class="d-flex flex-column justify-content-center">
           <h2>A propos de moi</h2>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
             ducimus autem rem. Illum earum a exercitationem fugiat asperiores
@@ -78,7 +120,91 @@
           <img src="img/github-ar21.svg" alt="" id="github" />
         </div>
       </section>
+
+      <section id="caroussel" class="container">
+        <div class="arrowPrev">
+          <span><i class="fas fa-angle-left"></i></span>
+        </div>
+        <div class="carousselContainer slider">
+          <div class="items">
+            <img src="img/siteBr.png" alt="" />
+            <h3>Site du groupe Back Roads <span>(en progression)</span></h3>
+            Création du site du groupe musique Back Roads avec vente en ligne
+            des albums et merchandise.
+            <div>
+              <a href="">En voir plus</a>
+              <a href=""><img src="img/logo-github.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="items">
+            <img src="img/horlogeJs.png" alt="" />
+            <h3>Horloge dynamique</h3>
+            Projet effectué lors de mon apprentissage du Javascript. C'est une
+            horloge avec un affichage dynamique aléatoire à chaque chargement de
+            page.
+            <div>
+              <a href="">En voir plus</a>
+              <a href=""><img src="img/logo-github.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="items">
+            <img src="img/scrapingProject.png" alt="" />
+            <h3>WebScraping avec Python <span>(en progression)</span></h3>
+            Projet de webscraping de données publiques afin de pouvoir délivrer
+            une API réalisant une data visualisation des données. En
+            collaboration avec Cyril Couffe.
+            <div>
+              <a class="logoAlone" href=""
+                ><img src="img/logo-github.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="arrowNext">
+          <span><i class="fas fa-angle-right"></i></span>
+        </div>
+      </section>
+      <section id="contact" class="container">
+        <h2>Contactez moi !</h2>
+        <div class="wrap-contact">
+			<span class="icon">
+				<img src="images/icons/symbol-01.png" alt="SYMBOL-MAIL">
+			</span>
+
+			<form class="contact-form validate-form ">
+				<span class="contact-form-title">
+					Drop Us A Message
+				</span>
+
+				<div class="wrapAllInput">
+
+        <div class="wrap-input  validate-input" data-validate = "Name is required">
+					<input class="input" type="text" name="name" placeholder="Name" autocomplete="off">
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="wrap-input  validate-input" data-validate = "Email is required: e@a.z">
+					<input class="input" type="text" name="email" placeholder="Email Address" autocomplete="off">
+					<span class="focus-input"></span>
+				</div>
+      </div>
+
+				<div class="wrap-input validate-input" data-validate = "Message is required">
+					<textarea class="input" name="message" placeholder="Write Us A Message"></textarea>
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="container-contact-form-btn">
+					<button class="contact-form-btn">
+						Send
+					</button>
+				</div>
+			</form>
+      </section>
     </main>
-    <script type="text/javascript" src="script/script.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
