@@ -1,6 +1,7 @@
 /**********Style Globaux**********/
 body {
   color: black;
+  font-family: "Barlow", Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -242,6 +243,11 @@ header .text p {
 }
 
 /* ***************Caroussel link ************ */
+.parallax-header2 {
+  position: relative;
+  height: 700px;
+  margin-bottom: 50px;
+}
 
 #caroussel .carousselContainer .items div {
   display: flex;
