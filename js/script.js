@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
     const scrolled =  window.scrollY;
     console.log(scrolled);
 
-    if(scrolled > 800){
+    if(scrolled > 700){
         finalPosition(listLogo,listeCoordX,listeCoordY);
     }
     });
@@ -62,17 +62,20 @@ $(function(){
 		centerPadding: '80px',
 		slidesToShow: 2,
 		adaptiveHeight: false,
-		prevArrow: $('.arrowPrev'),
-		nextArrow: $('.arrowNext')
+		prevArrow: $('.arrowNext'),
+		nextArrow: $('.arrowPrev'),
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        infinite: false,
+        initialSlide: 1,
+        focusOnSelect: true
+      
 	  });
 });
-
-(function ($) {
-    "use strict";
-
-
     /*==================================================================
     [ Validate ]*/
+(function ($) {
+    "use strict";
     var input = $('.validate-input .input');
 
     $('.validate-form').on('submit',function(){

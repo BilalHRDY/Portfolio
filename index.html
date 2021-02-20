@@ -54,10 +54,13 @@
                 <a class="nav-link" href="#tech">Eco-système</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#portfolio2">Portfolio</a>
+                <a class="nav-link" href="#tech">Mes valeurs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#exposure2">Contact</a>
+                <a class="nav-link" href="#titleCaroussel">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#titleContact">Contact</a>
               </li>
             </ul>
           </div>
@@ -81,9 +84,7 @@
 
     <main>
       <section id="bio" class="container d-flex">
-        <img src="img/Bilal_photo3.png" alt="photo de Bilal HARDY" />
-
-        <article class="d-flex flex-column justify-content-center">
+        <article class="d-flex flex-column align-items-center">
           <h2>A propos de moi</h2>
 
           <p>
@@ -98,34 +99,86 @@
         </article>
       </section>
 
-      <section id="tech">
-        <h2 class="text-center">Mon éco-système</h2>
-        <div id="logoContainer">
-          <img src="img/Android_logo_2019.svg" alt="" id="android" />
-          <img src="img/scrumorg-1.svg" alt="" id="scrum" />
+      <section id="tech" class="container">
+        <div class="wrapContainer">
+          <div class="containerLeft">
+            <h2>Mon Eco-système</h2>
 
-          <img
-            src="img/https___mariadb.com_wp-content_uploads_2019_11_vertical-logo_black.svg"
-            alt=""
-            id="mariadb"
-          />
-          <img src="img/getbootstrap-ar21.svg" alt="" id="bootstrap" />
-          <img
-            src="img/jsp-open-file-format-with-java-logo.svg"
-            alt=""
-            id="jsp"
-          />
-          <img src="img/Spring_Framework_Logo_2018.svg" alt="" id="spring" />
-          <img src="img/symfony-logo-vector.svg" alt="" id="symfony" />
-          <img src="img/github-ar21.svg" alt="" id="github" />
+            <div class="containerShadow">
+              <div id="logoContainer">
+                <img src="img/Android_logo_2019.svg" alt="" id="android" />
+                <img src="img/scrumorg-1.svg" alt="" id="scrum" />
+
+                <img
+                  src="img/https___mariadb.com_wp-content_uploads_2019_11_vertical-logo_black.svg"
+                  alt=""
+                  id="mariadb"
+                />
+                <img src="img/getbootstrap-ar21.svg" alt="" id="bootstrap" />
+                <img
+                  src="img/jsp-open-file-format-with-java-logo.svg"
+                  alt=""
+                  id="jsp"
+                />
+                <img
+                  src="img/Spring_Framework_Logo_2018.svg"
+                  alt=""
+                  id="spring"
+                />
+                <img src="img/symfony-logo-vector.svg" alt="" id="symfony" />
+                <img src="img/github-ar21.svg" alt="" id="github" />
+              </div>
+            </div>
+          </div>
+          <article>
+            <h2>Mes Valeurs</h2>
+            <div class="textValeur">
+              <div>
+                <div class="iconValeur">
+                  <img src="img/workgroup.svg" alt="" />
+                  <h3>Travail en équipe</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur hic quaerat, soluta corporis ullam Lorem ipsum dolor
+                  sit amet.consectetur?
+                </p>
+              </div>
+              <div>
+                <div class="iconValeur">
+                  <img src="img/transparency.svg" alt="" />
+
+                  <h3>Transparence</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur hic quaerat, soluta corporis ullam consectetur Lorem
+                  ipsum dolor sit amet. ?
+                </p>
+              </div>
+              <div>
+                <div class="iconValeur">
+                  <img src="img/medal.svg" alt="" />
+
+                  <h3>Qualité</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur hic quaerat, soluta corporis ullam consectetur? Lorem
+                  ipsum dolor sit amet. ?
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
       <section id="caroussel" class="container">
+        <h2 id="titleCaroussel">Portfolio</h2>
         <div class="arrowPrev">
           <span><i class="fas fa-angle-left"></i></span>
         </div>
-        <div class="carousselContainer slider">
+        <div class="carousselContainer container slider">
           <div class="items">
             <img src="img/siteBr.png" alt="" />
             <h3>Site du groupe Back Roads <span>(en progression)</span></h3>
@@ -164,42 +217,71 @@
           <span><i class="fas fa-angle-right"></i></span>
         </div>
       </section>
+
       <section id="contact" class="container">
-        <h2>Contactez moi !</h2>
-        <div class="wrap-contact">
-			<span class="icon">
-				<img src="images/icons/symbol-01.png" alt="SYMBOL-MAIL">
-			</span>
+        <h2 id="titleContact">Contact</h2>
+        <div class="wrapContact">
+          <div class="wrapForm">
+            <span class="icon">
+              <img src="img/symbol-01.png" alt="SYMBOL-MAIL" />
+            </span>
 
-			<form class="contact-form validate-form ">
-				<span class="contact-form-title">
-					Drop Us A Message
-				</span>
+            <form class="contact-form validate-form">
+              <span class="contact-form-title"> Laissez moi un message ! </span>
 
-				<div class="wrapAllInput">
+              <div class="wrapAllInput">
+                <div
+                  class="wrap-input validate-input"
+                  data-validate="Name is required"
+                >
+                  <input
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Nom"
+                    autocomplete="off"
+                  />
+                </div>
 
-        <div class="wrap-input  validate-input" data-validate = "Name is required">
-					<input class="input" type="text" name="name" placeholder="Name" autocomplete="off">
-					<span class="focus-input"></span>
-				</div>
+                <div
+                  class="wrap-input validate-input"
+                  data-validate="Email is required: e@a.z"
+                >
+                  <input
+                    class="input"
+                    type="text"
+                    name="email"
+                    placeholder="Adresse Email "
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
 
-				<div class="wrap-input  validate-input" data-validate = "Email is required: e@a.z">
-					<input class="input" type="text" name="email" placeholder="Email Address" autocomplete="off">
-					<span class="focus-input"></span>
-				</div>
-      </div>
+              <div
+                class="wrap-input validate-input"
+                data-validate="Message is required"
+              >
+                <textarea
+                  class="input"
+                  name="message"
+                  placeholder="Ecrivez votre texte ici"
+                ></textarea>
+              </div>
 
-				<div class="wrap-input validate-input" data-validate = "Message is required">
-					<textarea class="input" name="message" placeholder="Write Us A Message"></textarea>
-					<span class="focus-input"></span>
-				</div>
+              <div class="container-contact-form-btn">
+                <button class="contact-form-btn">Send</button>
+              </div>
+            </form>
+          </div>
 
-				<div class="container-contact-form-btn">
-					<button class="contact-form-btn">
-						Send
-					</button>
-				</div>
-			</form>
+          <div class="coordonnees">
+            <h3>Me contacter directement</h3>
+            <div class="separator"></div>
+            <p>Coordonnées:</p>
+            <p>Téléphone: +33 6 43 61 15 92</p>
+            <p>Email: hardybilal@hotmail.com</p>
+          </div>
+        </div>
       </section>
     </main>
 
