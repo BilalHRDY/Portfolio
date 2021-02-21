@@ -15,7 +15,7 @@ h2 {
 h2.parallaxTitle {
   padding: 10px 10px;
   background-color: rgba(255, 255, 255, 0.815);
-  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.267);
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.13);
   border-radius: 10px;
   border: none;
 }
@@ -126,31 +126,20 @@ header .text p {
   height: 110vh;
 }
 
-#tech .wrapContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-#tech .containerLeft {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #tech .containerShadow {
   background-color: rgba(255, 255, 255, 0.815);
-  height: 600px;
-  width: 600px;
+  height: 70vh;
+  width: 70vh;
   margin: auto;
-  padding: 50px 50px;
+  padding: 5vh 5vh;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
 
 #tech #logoContainer {
   position: relative;
-  width: 500px;
-  height: 500px;
+  height: 50vh;
+  width: 50vh;
   margin: 0px 0px;
 }
 
@@ -159,7 +148,7 @@ header .text p {
   transform: translate(-50%, -50%);
 }
 #tech #symfony {
-  width: 150px;
+  width: 30%;
 }
 #tech #spring {
   width: 140px;
@@ -186,23 +175,15 @@ header .text p {
 
 /* ************* Valeurs ********* */
 
-#tech article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #tech article .textValeur {
   background-color: rgba(255, 255, 255, 0.795);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   height: 600px;
   width: 600px;
   border-radius: 10px;
   padding: 30px 20px;
 }
+
 #tech article .textValeur .iconValeur {
   display: flex;
   align-items: center;
@@ -222,16 +203,7 @@ header .text p {
 
 #caroussel {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   position: relative;
-}
-
-#caroussel .carousselContainer {
-  display: flex;
-  align-self: center;
 }
 
 #caroussel .carousselContainer .items {
@@ -308,20 +280,12 @@ header .text p {
   height: 120vh;
 }
 
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #contact h2 {
   margin: 60px 0px 100px 0px;
 }
 
 #contact .wrapContact {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
 }
 
 /* ********************* Formulaire ******************************** */
@@ -345,6 +309,7 @@ header .text p {
 
 /*------------------------------------------------------------------
 [ Input ]*/
+
 #contact .wrapContact .wrapForm form .input {
   display: block;
   width: 100%;
@@ -353,11 +318,6 @@ header .text p {
   font-family: OpenSans-Regular;
   color: #333333;
   line-height: 1.2;
-}
-
-#contact .wrapContact .wrapForm form .wrapNameMail {
-  display: flex;
-  justify-content: space-between;
 }
 
 #contact .wrapContact .wrapForm form .wrap-input {
@@ -384,15 +344,9 @@ textarea.input {
 [ Button ]*/
 .container-contact-form-btn {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .contact-form-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0 20px;
   min-width: 100px;
   height: 50px;

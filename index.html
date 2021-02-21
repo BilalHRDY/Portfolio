@@ -111,8 +111,8 @@
         data-image-src="img/background_geo.jpg"
       >
         <section id="tech" class="container">
-          <div class="wrapContainer">
-            <div class="containerLeft">
+          <div class="wrapContainer d-lg-flex justify-content-lg-between">
+            <div class="containerLeft d-flex flex-column align-items-center">
               <h2 class="parallaxTitle">Mon Eco-système</h2>
 
               <div class="containerShadow">
@@ -141,9 +141,11 @@
                 </div>
               </div>
             </div>
-            <article>
+            <article class="d-flex flex-column align-items-center">
               <h2 class="parallaxTitle">Mes Valeurs</h2>
-              <div class="textValeur">
+              <div
+                class="textValeur d-flex flex-column justify-content-sm-around"
+              >
                 <div>
                   <div class="iconValeur">
                     <img src="img/workgroup.svg" alt="" />
@@ -185,12 +187,15 @@
         </section>
       </div>
 
-      <section id="caroussel" class="container">
+      <section
+        id="caroussel"
+        class="container d-flex flex-column align-items-center"
+      >
         <h2>Portfolio</h2>
         <div class="arrowPrev">
           <span><i class="fas fa-angle-left"></i></span>
         </div>
-        <div class="carousselContainer container slider">
+        <div class="carousselContainer container slider d-flex">
           <div class="items">
             <img src="img/siteBr.png" alt="" />
             <h3>Site du groupe Back Roads <span>(en progression)</span></h3>
@@ -235,9 +240,12 @@
         data-z-index="-10"
         data-image-src="img/background_geo.jpg"
       >
-        <section id="contact" class="container">
+        <section
+          id="contact"
+          class="container d-flex flex-column align-items-center"
+        >
           <h2 class="parallaxTitle">Contact</h2>
-          <div class="wrapContact">
+          <div class="wrapContact d-flex justify-content-sm-between">
             <div class="wrapForm">
               <span class="icon">
                 <img src="img/mail.svg" alt="SYMBOL-MAIL" />
@@ -246,7 +254,7 @@
               <form class="validate-form">
                 <span> Laissez moi un message ! </span>
 
-                <div class="wrapNameMail">
+                <div class="wrapNameMail d-flex justify-content-sm-between">
                   <div
                     class="wrap-input validate-input"
                     data-validate="Name is required"
@@ -285,8 +293,14 @@
                   ></textarea>
                 </div>
 
-                <div class="container-contact-form-btn">
-                  <button class="contact-form-btn">Send</button>
+                <div
+                  class="container-contact-form-btn d-flex flex-wrap justify-content-sm-end"
+                >
+                  <button
+                    class="contact-form-btn d-flex justify-content-center align-items-center"
+                  >
+                    Send
+                  </button>
                 </div>
               </form>
             </div>
