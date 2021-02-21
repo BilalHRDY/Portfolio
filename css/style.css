@@ -5,16 +5,25 @@ body {
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.7em;
   display: inline-block;
-  margin-bottom: 70px;
-  margin-top: 10px;
+  margin: 60px 0px 50px 0px;
   text-align: center;
   letter-spacing: 0.1rem;
-  border-bottom: 1px rgb(83, 83, 83) solid;
 }
 
-/**********Header**********/
+h2.parallaxTitle {
+  padding: 8px 8px;
+  background-color: rgba(255, 255, 255, 0.815);
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.267);
+  border-radius: 10px;
+  border: none;
+}
+.parallax-mirror {
+  opacity: 0.8;
+}
+
+/************************ Header *****************************/
 
 header .navbar {
   background-color: rgb(46, 45, 45);
@@ -56,9 +65,6 @@ header .navbar a {
 .parallax {
   background: transparent;
 }
-.parallax-mirror {
-  opacity: 0.8;
-}
 
 .parallaxHeader {
   position: relative;
@@ -97,17 +103,7 @@ header .text p {
 
 .parallaxTech {
   position: relative;
-  height: 800px;
-  margin-bottom: 100px;
-}
-
-#tech .wrapContainer h2 {
-  margin: 60px 0px 50px 0px;
-  padding: 8px 8px;
-  background-color: rgba(255, 255, 255, 0.815);
-  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  border: none;
+  height: 110vh;
 }
 
 #tech .wrapContainer {
@@ -185,7 +181,6 @@ header .text p {
   height: 600px;
   width: 600px;
   border-radius: 10px;
-  /* margin-left: 100px; */
   padding: 30px 20px;
 }
 #tech article .textValeur .iconValeur {
@@ -206,11 +201,12 @@ header .text p {
 /************* Caroussel ********** */
 
 #caroussel {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   position: relative;
-  /* margin-top: 100px; */
 }
 
 #caroussel .carousselContainer {
@@ -259,7 +255,7 @@ header .text p {
   font-size: 80px;
 }
 
-/* ***************Caroussel link ************ */
+/* ************************Caroussel link ********************** */
 
 #caroussel .carousselContainer .items div {
   display: flex;
@@ -285,32 +281,36 @@ header .text p {
   background-color: white;
 }
 
-/* *************Contact************** */
+/* ************************** Contact ****************************** */
+.parallaxContact {
+  position: relative;
+  height: 120vh;
+}
+
 #contact {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container-contact {
-  width: 100%;
-  padding: 15px;
-  background: transparent;
-}
 
 #contact .wrapContact {
   display: flex;
-  margin-top: 50px;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.wrapForm {
-  width: 800px;
+/* ********************* Formulaire ******************************** */
+
+#contact .wrapContact .wrapForm {
+  width: 700px;
   position: relative;
   padding: 92px 70px 88px 70px;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.815);
 }
 
-.icon {
+#contact .wrapContact .wrapForm .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,19 +325,11 @@ header .text p {
   transform: translateX(-50%);
 }
 
-.icon img {
+#contact .wrapContact .wrapForm span img {
   max-width: 49px;
 }
-/* *********** Contact **************** */
 
-#contact .wrap-contact {
-  text-align: center;
-}
-.contact-form {
-  width: 100%;
-}
-
-.contact-form-title {
+#contact .wrapContact .wrapForm .validate-form span {
   display: flex;
   font-size: 30px;
   color: #333333;
@@ -347,18 +339,7 @@ header .text p {
 
 /*------------------------------------------------------------------
 [ Input ]*/
-
-.wrapAllInput {
-  display: flex;
-  justify-content: space-between;
-}
-
-.wrap-input {
-  margin-bottom: 30px;
-}
-
-/*---------------------------------------------*/
-.input {
+#contact .wrapContact .wrapForm form .input {
   display: block;
   width: 100%;
   border: 1px solid #dbdbdb;
@@ -368,7 +349,16 @@ header .text p {
   line-height: 1.2;
 }
 
-input.input {
+#contact .wrapContact .wrapForm form .wrapNameMail {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact .wrapContact .wrapForm form .wrap-input {
+  margin-bottom: 30px;
+}
+
+#contact .wrapContact .wrapForm form .wrapNameMail input {
   height: 60px;
   padding: 0 20px 0 25px;
   font-size: 20px;
@@ -391,7 +381,6 @@ textarea.input {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin-top: -10px;
 }
 
 .contact-form-btn {
@@ -468,16 +457,15 @@ textarea.input {
   }
 } */
 
-/* ********** Coordonnées ********* */
-#contact .wrap-contact {
-  margin-top: 50px;
-}
+/* *************************** Coordonnées ************************* */
+
 #contact .coordonnees {
-  margin-left: 150px;
+  /* margin-left: 150px; */
   height: 300px;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.815);
 }
 
 #contact .coordonnees h3 {
@@ -488,4 +476,10 @@ textarea.input {
   border-top: 1px black solid;
   padding-bottom: 20px;
   width: 150px;
+}
+
+/* ***************************Footer ********************************* */
+
+footer {
+  height: 40px;
 }
