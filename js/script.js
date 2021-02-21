@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
     const scrolled =  window.scrollY;
     console.log(scrolled);
 
-    if(scrolled > 700){
+    if(scrolled > 650){
         finalPosition(listLogo,listeCoordX,listeCoordY);
     }
     });
