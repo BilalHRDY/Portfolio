@@ -68,7 +68,15 @@ $(function(){
         pauseOnFocus: false,
         infinite: false,
         initialSlide: 1,
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              initialSlide: 1,
+              
+            }
+          }]
       
 	  });
 });
