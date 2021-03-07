@@ -57,6 +57,41 @@ header .navbar a {
   color: white;
 }
 
+nav a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+nav a {
+  position: relative;
+  transition: all 2s;
+}
+
+nav ul li a:after {
+  text-align: left;
+  content: ".";
+  margin: 0;
+  opacity: 0;
+}
+nav a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
 .navbar-toggler {
   border-color: white;
 }
@@ -179,18 +214,9 @@ header .text p {
 #tech img {
   width: 20%;
 }
-@media (max-width: 1200px) {
-  .parallaxTech {
-    padding-bottom: 80px;
-    height: unset;
-  }
-  #tech .containerLeft {
-    height: 100%;
-    margin: auto;
-  }
-}
 
 /* ************* Valeurs ********* */
+
 #tech article {
   width: 50%;
 }
@@ -218,13 +244,51 @@ header .text p {
   margin: 15px 0px 15px 0px;
 }
 
+@media (max-width: 420px) {
+  #tech .containerShadow {
+    width: 300px;
+    height: 300px;
+  }
+  #tech article .textValeur {
+    width: 300px;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 550px) {
+  #tech .containerShadow {
+    width: 350px;
+    height: 350px;
+  }
+  #tech article .textValeur {
+    width: 350px;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 700px) {
+  #tech .containerShadow {
+    width: 450px;
+    height: 450px;
+  }
+  #tech article .textValeur {
+    width: 450px;
+  }
+}
+
 @media (max-width: 1200px) {
+  .parallaxTech {
+    padding-bottom: 80px;
+    height: unset;
+  }
+  #tech .containerLeft {
+    height: 100%;
+    margin: auto;
+  }
   #tech article {
     width: unset;
   }
-  #tech article .textValeur {
+  /* #tech article .textValeur {
     height: unset;
-  }
+  } */
 }
 
 /************* Caroussel ********** */
@@ -251,8 +315,17 @@ header .text p {
 #caroussel .carousselContainer .items img {
   width: 100%;
   /* height: 200px; */
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
+
+#caroussel .carousselContainer .items h3 {
+  margin-top: 20px;
+}
+#caroussel .carousselContainer .items p {
+  margin-top: 20px;
+}
+
 .slick-slide {
   transform: scale(0.8);
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -279,6 +352,16 @@ header .text p {
 .fa-angle-left,
 .fa-angle-right {
   font-size: 80px;
+}
+
+@media (max-width: 600px) {
+  #caroussel .carousselContainer .items p {
+    display: none;
+  }
+  .arrowPrev,
+  .arrowNext {
+    display: none !important;
+  }
 }
 
 /* ************************Caroussel link ********************** */
@@ -320,18 +403,20 @@ header .text p {
 
 #contact .wrapContact {
   width: 100%;
-  /* margin: auto auto; */
 }
-#contact .wrapContact .wrapForm {
-  margin: auto auto;
+@media (max-width: 545px) {
+  .parallaxContact {
+    margin-top: 100px;
+  }
 }
 
 /* ********************* Formulaire ******************************** */
 
 #contact .wrapContact .wrapForm {
-  width: 100%;
+  width: 600px;
+  /* margin-right: 10%; */
   position: relative;
-  padding: 92px 70px 88px 70px;
+  padding: 92px 70px 70px 70px;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.815);
@@ -340,11 +425,40 @@ header .text p {
 #contact .wrapContact .wrapForm .validate-form span {
   display: flex;
   font-size: 30px;
-  color: #333333;
   line-height: 1.2;
   padding-bottom: 43px;
 }
 
+@media (max-width: 992px) {
+  #contact .wrapContact .wrapForm {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  #contact .wrapContact .wrapForm {
+    width: 500px;
+  }
+}
+@media (max-width: 545px) {
+  #contact .wrapContact .wrapForm .validate-form span {
+    font-size: 2rem;
+  }
+  #contact .wrapContact .wrapForm {
+    width: 400px;
+    padding: 92px 8% 40px 8%;
+  }
+}
+@media (max-width: 460px) {
+  #contact .wrapContact .wrapForm {
+    width: 300px;
+  }
+}
+@media (min-width: 993px) {
+  #contact .wrapContact .wrapForm {
+    margin-bottom: 80px;
+  }
+}
 /*------------------------------------------------------------------
 [ Input ]*/
 
@@ -353,7 +467,6 @@ header .text p {
   width: 100%;
   border: 1px solid #dbdbdb;
   border-radius: 2px;
-  font-family: OpenSans-Regular;
   color: #333333;
   line-height: 1.2;
 }
@@ -362,10 +475,18 @@ header .text p {
   margin-bottom: 30px;
 }
 
-#contact .wrapContact .wrapForm form .wrapNameMail input {
+#contact .wrapContact .wrapForm form .wrapNameMail .wrap-input input {
+  width: 90%;
   height: 60px;
   padding: 0 20px 0 25px;
-  font-size: 20px;
+  font-size: 16px;
+}
+#contact .wrapContact .wrapForm form .wrapNameMail .wrap-input .inputName {
+  margin: 0px auto 0px 0px;
+}
+
+#contact .wrapContact .wrapForm form .wrapNameMail .wrap-input .inputMail {
+  margin: 0px 0px 0px auto;
 }
 
 textarea.input {
@@ -378,6 +499,24 @@ textarea.input {
   border-color: blueviolet;
 }
 
+@media (max-width: 700px) {
+  #contact .wrapContact .wrapForm textarea.input {
+    min-height: 125px;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact .wrapContact .wrapForm form .wrapNameMail .wrap-input input {
+    width: 100%;
+    margin: unset;
+  }
+}
+
+@media (max-width: 545px) {
+  #contact .wrapContact .wrapForm form .wrapNameMail .wrap-input input {
+    height: 46px;
+  }
+}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-contact-form-btn {
@@ -400,6 +539,13 @@ textarea.input {
 
 .contact-form-btn:hover {
   background-color: #333333;
+}
+
+@media (max-width: 545px) {
+  .contact-form-btn {
+    min-width: 82px;
+    height: 40px;
+  }
 }
 
 /*------------------------------------------------------------------
@@ -460,6 +606,7 @@ textarea.input {
 #contact .coordonnees {
   position: relative;
   height: 300px;
+  margin-bottom: 80px;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 92px 20px 0px 20px;
@@ -475,6 +622,12 @@ textarea.input {
   padding-bottom: 20px;
   width: 150px;
 }
+
+/* @media (max-width: 545px) {
+  #contact .coordonnees {
+    margin-bottom: 70px;
+  }
+} */
 
 /* ***************************Footer ********************************* */
 

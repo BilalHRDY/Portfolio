@@ -49,7 +49,7 @@ function finalPosition(listLogo,listeCoordX,listeCoordY){
 
 window.addEventListener('scroll', () => {
     const scrolled =  window.scrollY;
-    console.log(scrolled);
+    // console.log(scrolled);
 
     if(scrolled > 650){
         finalPosition(listLogo,listeCoordX,listeCoordY);
@@ -58,6 +58,7 @@ window.addEventListener('scroll', () => {
 	
 $(function(){
 	$('.slider').slick({
+        
 		centerMode: true,
 		centerPadding: '80px',
 		slidesToShow: 2,
@@ -69,14 +70,29 @@ $(function(){
         infinite: false,
         initialSlide: 1,
         focusOnSelect: true,
+       
         responsive: [{
+            
             breakpoint: 1024,
             settings: {
+            
               slidesToShow: 1,
               initialSlide: 1,
-              
+             
+            }},
+            {
+            breakpoint: 600,
+            
+            settings: {
+          
+                vertical: true,
+                verticalSwiping: true,
+              slidesToShow: 1,
+              initialSlide: 1,
+             
             }
-          }]
+        }
+          ] 
       
 	  });
 });
@@ -134,4 +150,6 @@ $(function(){
     
 
 })(jQuery);
+
+log($(window).width());
 
