@@ -1,5 +1,8 @@
 let log = console.log;
 
+// var secondParallax = document.querySelectorAll('.parallax-mirror')[2];
+// secondParallax.style['margin-bottom'] = '100px;';
+
 
 var logoContainer = document.getElementById("logoContainer");
 var listLogo = logoContainer.getElementsByTagName("img");
@@ -63,11 +66,11 @@ $(function(){
 		centerPadding: '80px',
 		slidesToShow: 2,
 		adaptiveHeight: false,
-		prevArrow: $('.arrowNext'),
-		nextArrow: $('.arrowPrev'),
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        infinite: false,
+		prevArrow: $('.arrowPrev'),
+		nextArrow: $('.arrowNext'),
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        infinite: true,
         initialSlide: 1,
         focusOnSelect: true,
        

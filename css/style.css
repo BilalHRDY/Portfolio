@@ -3,8 +3,6 @@ body {
   color: black;
   font-family: "Barlow", Arial, Helvetica, sans-serif;
 }
-.container1 {
-}
 
 h2 {
   font-size: 1.7em;
@@ -125,7 +123,7 @@ header .text {
 }
 
 header h1 {
-  font-size: 3em;
+  font-size: 4em;
 }
 header h1 #firstName {
   letter-spacing: 0.1em;
@@ -152,13 +150,13 @@ header .text p {
 
 .parallaxTech {
   position: relative;
-  height: 110vh;
+  height: 120vh;
 }
 .containerLeft {
   position: relative;
   width: 50%;
 
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 #tech .containerShadow {
@@ -221,10 +219,16 @@ header .text p {
   padding: 30px 20px;
 }
 
-#tech article .textValeur .iconValeur {
+#tech article .textValeur .wrapValeur div {
   display: flex;
   align-items: flex-end;
+  margin-top: 15px;
 }
+
+#tech article .textValeur .wrapValeur:first-child div {
+  margin-top: 0px;
+}
+
 #tech article .textValeur .iconValeur img {
   width: 40px;
   margin-right: 10px;
@@ -233,7 +237,7 @@ header .text p {
   margin: 0px 0px;
 }
 #tech article .textValeur p {
-  margin: 15px 0px 15px 0px;
+  margin: 15px 0px 0px 0px;
 }
 
 @media (max-width: 420px) {
@@ -243,6 +247,7 @@ header .text p {
   }
   #tech article .textValeur {
     width: 300px;
+    height: inherit;
   }
 }
 
@@ -291,7 +296,7 @@ header .text p {
 /************* Caroussel ********** */
 
 #caroussel {
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 
@@ -322,6 +327,12 @@ header .text p {
 #caroussel .carousselContainer .items p {
   margin-top: 20px;
 }
+
+/* Resoud le bug de la fin de cycle de la track */
+.slick-track {
+  transition: fade 2000ms ease-out;
+}
+/* ************************************** */
 
 .slick-slide {
   transform: scale(0.8);
@@ -427,7 +438,7 @@ header .text p {
 
 #contact .wrapContact .wrapForm .validate-form span {
   display: flex;
-  font-size: 30px;
+  font-size: 1.2em;
   line-height: 1.2;
   padding-bottom: 43px;
 }
