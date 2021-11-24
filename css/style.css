@@ -203,28 +203,28 @@ header .text p {
   position: absolute;
   transform: translate(-50%, -50%);
 }
-#tech #symfony {
-  width: 35%;
-}
-#tech #spring {
+#tech #img1 {
   width: 30%;
 }
-#tech #scrum {
+#tech #img2 {
+  width: 23%;
+}
+#tech #img3 {
+  width: 20%;
+}
+#tech #img4 {
   width: 25%;
 }
-#tech #jsp {
-  width: 20%;
+#tech #img5 {
+  width: 25%;
 }
-#tech #bootstrap {
-  width: 30%;
+#tech #img6 {
+  width: 33%;
 }
-#tech #github {
-  width: 30%;
+#tech #img7 {
+  width: 25%;
 }
-#tech #mariadb {
-  width: 20%;
-}
-#tech img {
+#tech #img8 {
   width: 20%;
 }
 
@@ -336,7 +336,7 @@ header .text p {
 
 #caroussel .carousselContainer .items img {
   width: 100%;
-
+  min-height: 70%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
