@@ -51,41 +51,41 @@ function finalPosition(listLogo, listeCoordX, listeCoordY) {
 
 finalPosition(listLogo, listeCoordX, listeCoordY);
 
-$(function () {
-  $(".slider").slick({
-    centerMode: true,
-    centerPadding: "80px",
-    slidesToShow: 2,
-    adaptiveHeight: false,
-    prevArrow: $(".arrowPrev"),
-    nextArrow: $(".arrowNext"),
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    infinite: true,
-    initialSlide: 1,
-    focusOnSelect: true,
+// $(function () {
+//   $(".slider").slick({
+//     centerMode: true,
+//     centerPadding: "80px",
+//     slidesToShow: 2,
+//     adaptiveHeight: false,
+//     prevArrow: $(".arrowPrev"),
+//     nextArrow: $(".arrowNext"),
+//     pauseOnHover: true,
+//     pauseOnFocus: true,
+//     infinite: true,
+//     initialSlide: 1,
+//     focusOnSelect: true,
 
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 600,
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 1,
+//           initialSlide: 1,
+//         },
+//       },
+//       {
+//         breakpoint: 600,
 
-        settings: {
-          vertical: true,
-          verticalSwiping: true,
-          slidesToShow: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
-  });
-});
+//         settings: {
+//           vertical: true,
+//           verticalSwiping: true,
+//           slidesToShow: 1,
+//           initialSlide: 1,
+//         },
+//       },
+//     ],
+//   });
+// });
 /*==================================================================
     [ Validate ]*/
 (function ($) {
@@ -143,4 +143,4 @@ $(function () {
   }
 })(jQuery);
 
-log($(window).width());
+// log($(window).width());

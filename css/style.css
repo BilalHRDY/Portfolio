@@ -2,6 +2,7 @@
 body {
   color: black;
   font-family: "Barlow", Arial, Helvetica, sans-serif;
+  background-color: green;
 }
 
 h2 {
@@ -313,8 +314,50 @@ header .text p {
 }
 
 /************* Caroussel ********** */
+#carousel{
+  background-color: yellow;
+}
+.carousel__root{
+  position: relative;
+  overflow: hidden;
+}
 
-#caroussel {
+/* clear fix */
+.carousel__panorama::after{
+  content:'';
+  clear:both;
+  display: table;
+}
+
+.carousel__item{
+  float:left;
+
+}
+.carousel__item img{  
+  display:block;
+  width:80%;
+  height:auto;
+}
+
+.item{
+  background-color: #ff4b5a;
+}
+
+.fas{
+  position: absolute;
+  z-index: 1111;
+  border-radius: 50%;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+} 
+
+.fa-angle-left{
+  right: auto;
+  /* left: -20px ; */
+}
+/* #caroussel {
   height: 100%;
   position: relative;
   margin-bottom: 5rem;
@@ -325,7 +368,7 @@ header .text p {
   margin: auto auto;
 }
 
-#caroussel .carousselContainer .items {
+#caroussel .carousselContainer .item {
   width: 250px;
   margin: 50px;
   font-size: 14px;
@@ -334,19 +377,19 @@ header .text p {
   border-radius: 10px;
 }
 
-#caroussel .carousselContainer .items img {
+#caroussel .carousselContainer .item img {
   width: 100%;
   min-height: 70%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-
-#caroussel .carousselContainer .items h3 {
+} */
+/* 
+#caroussel .carousselContainer .item h3 {
   margin-top: 20px;
 }
-#caroussel .carousselContainer .items p {
+#caroussel .carousselContainer .item p {
   margin: 20px 5px 0px 5px;
-}
+} */
 
 /* Resoud le bug de la fin de cycle de la track */
 .slick-track {
@@ -383,7 +426,7 @@ header .text p {
 }
 
 @media (max-width: 600px) {
-  #caroussel .carousselContainer .items p {
+  #caroussel .carousselContainer .item p {
     display: none;
   }
   .arrowPrev,
@@ -394,18 +437,18 @@ header .text p {
 
 /* ************************Caroussel link ********************** */
 
-#caroussel .carousselContainer .items div {
+#caroussel .carousselContainer .item div {
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-weight: bolder;
   padding: 15px;
 }
-#caroussel .carousselContainer .items a:first-child {
+#caroussel .carousselContainer .item a:first-child {
   display: inline-block;
 }
 
-#caroussel .carousselContainer .items div img {
+#caroussel .carousselContainer .item div img {
   width: 30px;
   height: auto;
 }

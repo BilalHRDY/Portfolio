@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/slick.css" /> -->
 
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="css/base.css" />
@@ -17,6 +17,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="parallax.js-1.5.0/parallax.min.js"></script>
+
   <title>Bilal HARDY</title>
 </head>
 
@@ -146,57 +147,63 @@
       </section>
     </div>
 
-    <section id="caroussel" class="myContainer d-flex flex-column align-items-center">
-      <h2>Portfolio</h2>
-      <div class="arrowPrev">
-        <span><i class="fas fa-angle-right"></i></span>
-      </div>
-      <div class="carousselContainer myContainer slider d-flex">
-        <div class="items">
-          <img src="img/siteBr.png" alt="" />
-          <h3>Site du groupe Back Roads</h3>
-          <span>(en progression)</span>
-          <p>
-            Création du site du groupe musique Back Roads avec vente en ligne
-            des albums et merchandise.
-          </p>
-          <div>
-            <a href="https://bilalhrdy.github.io/Site-Back-Roads/index.html">En voir plus</a>
-            <a href="https://github.com/BilalHRDY/Site-Back-Roads" target="_blank"><img src="img/logo-github.svg"
-                alt="" /></a>
+    <section class="container__carousel">
+      <div class="title__carousel">Portfolio</div>
+      <div id="carousel">
+        <div class="carousel__root">
+          <i class="fas fa-angle-right"></i>
+          <i class="fas fa-angle-left"></i>
+          <div class="carousel__panorama">
+            <div class="carousel__item">
+              <div id="item1">
+                <img src="img/siteBr.png" alt="" />
+                <h3>Site du groupe Back Roads</h3>
+                <span>(en progression)</span>
+                <p>
+                  Création du site du groupe musique Back Roads avec vente en ligne
+                  des albums et merchandise.
+                </p>
+                <div>
+                  <a href="https://bilalhrdy.github.io/Site-Back-Roads/index.html">En voir plus</a>
+                  <!-- <a href="https://github.com/BilalHRDY/Site-Back-Roads" target="_blank"><img src="img/logo-github.svg"
+              alt="" /></a> -->
+                </div>
+              </div>
+            </div>
+            <div class="carousel__item">
+              <div id="item2">
+                <img src="img/horlogeJs.png" alt="" />
+                <h3>Horloge dynamique</h3>
+                <p>
+                  Projet effectué lors de mon apprentissage du Javascript. C'est une
+                  horloge avec un affichage dynamique aléatoire à chaque chargement
+                  de page.
+                </p>
+                <div>
+                  <a href="https://bilalhrdy.github.io/Horloge-JS/">En voir plus</a>
+                  <!-- <a href="https://github.com/BilalHRDY/Horloge-JS"><img src="img/logo-github.svg" alt="" /></a> -->
+                </div>
+              </div>
+            </div>
+            <div class="carousel__item">
+              <div id="item3">
+                <img src="img/techAround.png" alt="" />
+                <h3>WebScraping avec Python/Flask</h3>
+                <span>(en progression)</span>
+                <p>
+                  Projet de webscraping de données publiques afin de pouvoir
+                  délivrer une API réalisant une data visualisation des données.
+                </p>
+                <div>
+                  <a href="https://www.techaround.fr/meteoSkills">En voir plus</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="items">
-          <img src="img/horlogeJs.png" alt="" />
-          <h3>Horloge dynamique</h3>
-          <p>
-            Projet effectué lors de mon apprentissage du Javascript. C'est une
-            horloge avec un affichage dynamique aléatoire à chaque chargement
-            de page.
-          </p>
-          <div>
-            <a href="https://bilalhrdy.github.io/Horloge-JS/">En voir plus</a>
-            <a href="https://github.com/BilalHRDY/Horloge-JS"><img src="img/logo-github.svg" alt="" /></a>
-          </div>
-        </div>
-        <div class="items">
-          <img src="img/techAround.png" alt="" />
-          <h3>WebScraping avec Python/Flask</h3>
-          <span>(en progression)</span>
-          <p>
-            Projet de webscraping de données publiques afin de pouvoir
-            délivrer une API réalisant une data visualisation des données.
-          </p>
-          <div>
-            <a href="https://www.techaround.fr/meteoSkills">En voir plus</a>
-            <!-- <a class="logoAlone" href=""><img src="img/logo-github.svg" alt="" /></a> -->
-          </div>
-        </div>
-      </div>
-      <div class="arrowNext">
-        <span><i class="fas fa-angle-left"></i></span>
       </div>
     </section>
+
     <div class="parallaxContact" data-parallax="scroll" data-z-index="-10" data-image-src="img/background_geo_new3.jpg">
       <section id="contact" class="container d-flex flex-column align-items-center">
         <h2 class="parallaxTitle">Contact</h2>
@@ -250,7 +257,8 @@
   </main>
 
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
+  <!-- <script type="text/javascript" src="js/slick.min.js"></script> -->
+  <script src="js/carousel.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 
