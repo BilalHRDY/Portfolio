@@ -1,11 +1,8 @@
 import express from "express";
-import path from "path";
+import { sendEmail } from "./middlewares/email.middleware.js";
 
-const __dirname = path.resolve();
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  console.log(req.body);
-});
+router.post("/", sendEmail);
 
 export default router;

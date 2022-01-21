@@ -1,5 +1,3 @@
-let log = console.log;
-
 // var secondParallax = document.querySelectorAll('.parallax-mirror')[2];
 // secondParallax.style['margin-bottom'] = '100px;';
 
@@ -86,61 +84,66 @@ $(function () {
     ],
   });
 });
-/*==================================================================
-    [ Validate ]*/
-(function ($) {
-  "use strict";
-  var input = $(".validate-input .input");
 
-  $(".validate-form").on("submit", function () {
-    var check = true;
+// ******************* Form contact *******************
 
-    for (var i = 0; i < input.length; i++) {
-      if (validate(input[i]) == false) {
-        showValidate(input[i]);
-        check = false;
-      }
-    }
-
-    return check;
+function sendEmail(inputs) {
+  const options = {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: inputs[0].value,
+      email: inputs[1].value,
+      message: inputs[2].value,
+    }),
+  };
+  return fetch("/contact", options).then((res) => {
+    console.log(res);
+    form.reset();
   });
+}
 
-  $(".validate-form .input").each(function () {
-    $(this).focus(function () {
-      hideValidate(this);
-    });
-  });
+function validateEmail(email) {
+  return email.value
+    .trim()
+    .match(
+      /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/
+    );
+}
 
-  function validate(input) {
-    if ($(input).attr("type") == "email" || $(input).attr("name") == "email") {
-      if (
-        $(input)
-          .val()
-          .trim()
-          .match(
-            /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/
-          ) == null
-      ) {
-        return false;
-      }
-    } else {
-      if ($(input).val().trim() == "") {
-        return false;
-      }
+function validate(input) {
+  if (input.value.trim() == "") return false;
+  else if (input.getAttribute("id") === "email" && !validateEmail(input)) {
+    return false;
+  } else return true;
+}
+
+const form = document.getElementById("contact-form");
+const formInputs = [...form.getElementsByClassName("input")];
+const validateDivs = document.getElementsByClassName("validate-input");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let formIsValid = true;
+
+  for (var i = 0; i < formInputs.length; i++) {
+    if (validate(formInputs[i]) == false) {
+      formInputs[i].parentElement.classList.add("alert-validate");
+      formIsValid = false;
     }
   }
-
-  function showValidate(input) {
-    var thisAlert = $(input).parent();
-
-    $(thisAlert).addClass("alert-validate");
+  if (formIsValid) {
+    sendEmail(formInputs);
+    form.reset();
   }
+});
 
-  function hideValidate(input) {
-    var thisAlert = $(input).parent();
-
-    $(thisAlert).removeClass("alert-validate");
-  }
-})(jQuery);
-
-log($(window).width());
+formInputs.forEach((input) => {
+  input.addEventListener("focus", (e) => {
+    e.preventDefault();
+    input.parentElement.classList.remove("alert-validate");
+  });
+});
