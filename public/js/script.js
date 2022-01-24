@@ -101,7 +101,6 @@ function sendEmail(inputs) {
     }),
   };
   return fetch("/contact", options).then((res) => {
-    console.log(res);
     form.reset();
   });
 }
